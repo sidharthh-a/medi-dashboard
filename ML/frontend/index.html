@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Spending Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .main-controls {
+            background: var(--card-background);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .filter-section {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .chart-container {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chart-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .table-container {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        select, button {
+            padding: 8px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background-color: white;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        label {
+            white-space: nowrap;
+        }
+        .main-controls {
+            background: var(--card-background);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: none; /* Hide by default */
+        }
+
+        .table-controls {
+            background: var(--card-background);
+            padding: 1rem;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>Drug Spending Dashboard</h1>
+        </div>
+
+        <!-- Charts section with their individual controls -->
+        <div class="chart-container">
+            <div class="chart-header">
+                <h2>Spending Trends</h2>
+                <div class="chart-controls">
+                    <div class="filter-group">
+                        <label for="line-chart-limit">Display Lines:</label>
+                        <select id="line-chart-limit">
+                            <option value="all">All</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <canvas id="spendingChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-header">
+                <h2>Comparison (Bar Chart)</h2>
+                <div class="chart-controls">
+                    <div class="filter-group">
+                        <label for="bar-chart-limit">Display Bars:</label>
+                        <select id="bar-chart-limit">
+                            <option value="all">All</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-header">
+                <h2>Spending Distribution (Pie Chart)</h2>
+                <div class="chart-controls">
+                    <div class="filter-group">
+                        <label for="pie-chart-limit">Display Segments:</label>
+                        <select id="pie-chart-limit">
+                            <option value="all">All</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <!-- Table section with its controls -->
+        <div class="table-section">
+            <div class="table-controls">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="drug-filter">Drug Name:</label>
+                        <select id="drug-filter">
+                            <option value="all">All Drugs</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year-filter">Year:</label>
+                        <select id="year-filter">
+                            <option value="all">All Years</option>
+                        </select>
+                    </div>
+                    <button id="reset-filters">Reset Filters</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <h2>Detailed Data</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Year</th>
+                            <th>Total Spending ($)</th>
+                            <th>Avg Spending per Beneficiary ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = "http://127.0.0.1:5000/predict";
+        let charts = {
+            spending: null,
+            bar: null,
+            pie: null
+        };
+
+        const colors = [
+            '#2563eb',
+            '#16a34a',
+            '#dc2626',
+            '#9333ea',
+            '#ea580c',
+            '#0d9488'
+        ];
+
+        async function fetchData() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                alert('Error loading data from API. Please check if the server is running.');
+                return null;
+            }
+        }
+
+        async function initializeDashboard() {
+            const data = await fetchData();
+            if (!data) return;
+
+            const yearFilter = document.getElementById('year-filter');
+            const drugFilter = document.getElementById('drug-filter');
+            
+            // Clear existing options
+            drugFilter.innerHTML = '<option value="all">All Drugs</option>';
+            yearFilter.innerHTML = '<option value="all">All Years</option>';
+
+            // Initialize filters
+            Object.keys(data).forEach(drug => {
+                const option = document.createElement('option');
+                option.value = drug;
+                option.textContent = drug;
+                drugFilter.appendChild(option);
+            });
+
+            // Initialize year filter
+            if (data[Object.keys(data)[0]]) {
+                const years = data[Object.keys(data)[0]].years;
+                years.forEach(year => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    yearFilter.appendChild(option);
+                });
+            }
+
+            // Initialize charts and table
+            updateCharts(data);
+            updateTable(data);
+
+            // Event listeners
+            yearFilter.addEventListener('change', () => updateTable(data));
+            drugFilter.addEventListener('change', () => updateTable(data));
+            document.getElementById('line-chart-limit').addEventListener('change', () => updateCharts(data));
+            document.getElementById('bar-chart-limit').addEventListener('change', () => updateCharts(data));
+            document.getElementById('pie-chart-limit').addEventListener('change', () => updateCharts(data));
+            document.getElementById('reset-filters').addEventListener('click', () => resetFilters(data));
+        }
+
+        function updateCharts(data) {
+            const lineChartLimit = document.getElementById('line-chart-limit').value;
+            const barChartLimit = document.getElementById('bar-chart-limit').value;
+            const pieChartLimit = document.getElementById('pie-chart-limit').value;
+            
+            // Get all available drugs
+            const allDrugs = Object.keys(data);
+            
+            // Function to get limited drugs based on limit
+            function getLimitedDrugs(limit) {
+                return allDrugs.slice(0, limit === 'all' ? undefined : parseInt(limit));
+            }
+
+            // Update line chart
+            const lineCtx = document.getElementById('spendingChart').getContext('2d');
+            const lineDrugs = getLimitedDrugs(lineChartLimit);
+            if (charts.spending) charts.spending.destroy();
+            charts.spending = new Chart(lineCtx, {
+                type: 'line',
+                data: {
+                    labels: data[Object.keys(data)[0]].years,
+                    datasets: lineDrugs.map((drug, index) => ({
+                        label: drug,
+                        data: data[drug].total_spending,
+                        borderColor: colors[index % colors.length],
+                        backgroundColor: colors[index % colors.length],
+                        fill: false
+                    }))
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Total Spending Over Time'
+                        }
+                    }
+                }
+            });
+
+            // Update bar chart
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            const barDrugs = getLimitedDrugs(barChartLimit);
+            if (charts.bar) charts.bar.destroy();
+            charts.bar = new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: data[Object.keys(data)[0]].years,
+                    datasets: barDrugs.map((drug, index) => ({
+                        label: drug,
+                        data: data[drug].total_spending,
+                        backgroundColor: colors[index % colors.length]
+                    }))
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Spending Comparison'
+                        }
+                    }
+                }
+            });
+
+            // Update pie chart
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            const pieDrugs = getLimitedDrugs(pieChartLimit);
+            if (charts.pie) charts.pie.destroy();
+            charts.pie = new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: pieDrugs,
+                    datasets: [{
+                        data: pieDrugs.map(drug => 
+                            data[drug].total_spending.reduce((a, b) => a + b, 0)
+                        ),
+                        backgroundColor: pieDrugs.map((_, index) => 
+                            colors[index % colors.length]
+                        )
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Total Spending Distribution'
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateTable(data) {
+            const tableBody = document.getElementById('table-body');
+            const selectedYear = document.getElementById('year-filter').value;
+            const selectedDrug = document.getElementById('drug-filter').value;
+            
+            tableBody.innerHTML = '';
+            
+            Object.entries(data).forEach(([drug, drugData]) => {
+                if (selectedDrug === 'all' || drug === selectedDrug) {
+                    drugData.years.forEach((year, index) => {
+                        if (selectedYear === 'all' || year.toString() === selectedYear) {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${drug}</td>
+                                <td>${year}</td>
+                                <td>$${drugData.total_spending[index].toLocaleString()}</td>
+                                <td>$${drugData.avg_spending[index].toLocaleString()}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        }
+                    });
+                }
+            });
+        }
+
+        function resetFilters(data) {
+            document.getElementById('year-filter').value = 'all';
+            document.getElementById('drug-filter').value = 'all';
+            document.getElementById('line-chart-limit').value = 'all';
+            document.getElementById('bar-chart-limit').value = 'all';
+            document.getElementById('pie-chart-limit').value = 'all';
+            updateCharts(data);
+            updateTable(data);
+        }
+
+        // Initialize the dashboard when the page loads
+        document.addEventListener('DOMContentLoaded', initializeDashboard);
+    </script>
+</body>
+</html>

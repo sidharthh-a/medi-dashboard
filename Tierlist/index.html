@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Tier Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #0f172a;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #64748b;
+            margin: 0;
+        }
+
+        .chart-container {
+            position: relative;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        select, button {
+            padding: 8px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            color: #1e293b;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        select:hover, button:hover {
+            border-color: #94a3b8;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+        }
+
+        .stat-card h3 {
+            margin: 0 0 5px 0;
+            color: #64748b;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+
+        .stat-card p {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .control-group {
+                flex-direction: column;
+            }
+            
+            select, button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Drug Tier Analysis Dashboard</h1>
+            <p>Interactive visualization of drug tiers and distribution</p>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="chartType">Chart Type:</label>
+                <select id="chartType">
+                    <option value="bar">Bar Chart</option>
+                    <option value="pie">Pie Chart</option>
+                    <option value="radar">Radar Chart</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="sortBy">Sort By:</label>
+                <select id="sortBy">
+                    <option value="name">Drug Name</option>
+                    <option value="tier">Tier Level</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="filterTier">Filter Tier:</label>
+                <select id="filterTier">
+                    <option value="all">All Tiers</option>
+                    <option value="1">Tier 1</option>
+                    <option value="2">Tier 2</option>
+                    <option value="3">Tier 3</option>
+                    <option value="4">Tier 4</option>
+                    <option value="5">Tier 5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="drugChart"></canvas>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Drugs</h3>
+                <p id="totalDrugs">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Tier</h3>
+                <p id="avgTier">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Most Common Tier</h3>
+                <p id="commonTier">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const drugData = [
+            { name: "ATOMOXETINE", tier: 2 },
+            { name: "PAROXETINE", tier: 2 },
+            { name: "AZATHIOPRINE", tier: 2 },
+            { name: "NORETHINDRONE ACETATE", tier: 2 },
+            { name: "INDOMETHACIN", tier: 2 },
+            { name: "OMEPRAZOLE", tier: 1 },
+            { name: "FUROSEMIDE", tier: 1 },
+            { name: "ALENDRONATE SODIUM", tier: 1 },
+            { name: "FUROSEMIDE", tier: 1 },
+            { name: "METFORMIN", tier: 1 },
+            { name: "EPINASTINE HYDROCHLORIDE", tier: 3 },
+            { name: "COLCHICINE", tier: 3 },
+            { name: "DESVENLAFAXINE", tier: 3 },
+            { name: "PROGESTERONE", tier: 3 },
+            { name: "CYPROHEPTADINE HYDROCHLORIDE", tier: 3 },
+            { name: "COLISTIMETHATE", tier: 4 },
+            { name: "POLYMYXIN B", tier: 4 },
+            { name: "NORETHINDRONE ACETATE & ETHINYL ESTRADIOL", tier: 4 },
+            { name: "ISIBLOOM", tier: 4 },
+            { name: "LORYNA", tier: 4 },
+            { name: "NERLYNX", tier: 5 },
+            { name: "NITISINONE", tier: 5 },
+            { name: "TYMLOS", tier: 5 },
+            { name: "AMBRISENTAN", tier: 5 },
+            { name: "XERMELO", tier: 5 }
+        ];
+
+        let chart = null;
+
+        function getChartColors(count) {
+            const colors = [
+                'rgba(59, 130, 246, 0.7)',   // Blue
+                'rgba(16, 185, 129, 0.7)',    // Green
+                'rgba(249, 115, 22, 0.7)',    // Orange
+                'rgba(139, 92, 246, 0.7)',    // Purple
+                'rgba(239, 68, 68, 0.7)'      // Red
+            ];
+            return Array(count).fill().map((_, i) => colors[i % colors.length]);
+        }
+
+        function updateStats(filteredData) {
+            document.getElementById('totalDrugs').textContent = filteredData.length;
+            
+            const avgTier = (filteredData.reduce((sum, drug) => sum + drug.tier, 0) / filteredData.length).toFixed(1);
+            document.getElementById('avgTier').textContent = avgTier;
+            
+            const tierCounts = filteredData.reduce((acc, drug) => {
+                acc[drug.tier] = (acc[drug.tier] || 0) + 1;
+                return acc;
+            }, {});
+            const commonTier = Object.entries(tierCounts)
+                .sort((a, b) => b[1] - a[1])[0][0];
+            document.getElementById('commonTier').textContent = commonTier;
+        }
+
+        function updateChart() {
+            const chartType = document.getElementById('chartType').value;
+            const sortBy = document.getElementById('sortBy').value;
+            const filterTier = document.getElementById('filterTier').value;
+
+            let filteredData = [...drugData];
+            if (filterTier !== 'all') {
+                filteredData = filteredData.filter(drug => drug.tier === parseInt(filterTier));
+            }
+
+            filteredData.sort((a, b) => {
+                if (sortBy === 'name') return a.name.localeCompare(b.name);
+                return a.tier - b.tier;
+            });
+
+            const labels = filteredData.map(drug => drug.name);
+            const tierLevels = filteredData.map(drug => drug.tier);
+
+            updateStats(filteredData);
+
+            const config = {
+                type: chartType,
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Tier Level',
+                        data: tierLevels,
+                        backgroundColor: getChartColors(tierLevels.length),
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: chartType !== 'bar'
+                        }
+                    },
+                    scales: chartType === 'bar' ? {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    } : undefined
+                }
+            };
+
+            if (chart) {
+                chart.destroy();
+            }
+            chart = new Chart(document.getElementById('drugChart').getContext('2d'), config);
+        }
+
+        // Add event listeners
+        document.getElementById('chartType').addEventListener('change', updateChart);
+        document.getElementById('sortBy').addEventListener('change', updateChart);
+        document.getElementById('filterTier').addEventListener('change', updateChart);
+
+        // Initial chart render
+        updateChart();
+    </script>
+</body>
+</html>

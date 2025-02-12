@@ -1,0 +1,233 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluded Drugs Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+        }
+        
+        th:hover {
+            background-color: #45a049;
+        }
+        
+        th.sort-asc::after {
+            content: " ↑";
+        }
+        
+        th.sort-desc::after {
+            content: " ↓";
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+        
+        .rxcui {
+            font-family: monospace;
+        }
+        
+        .drug-name {
+            color: #1a73e8;
+        }
+        
+        .yes {
+            color: #4CAF50;
+        }
+        
+        .loading-text {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .error-text {
+            color: #dc3545;
+            font-style: italic;
+        }
+        
+        .retry-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .retry-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Excluded Drugs Data</h1>
+    
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                {% if columns %}
+                    <tr>
+                        {% for column in columns %}
+                        <th data-column="{{ column }}">{{ column.replace('_', ' ').title() }}</th>
+                        {% endfor %}
+                    </tr>
+                {% endif %}
+            </thead>
+            <tbody>
+                {% if data %}
+                    {% for row in data %}
+                    <tr>
+                        {% for column in columns %}
+                        {% if column == 'RXCUI' %}
+                            <td class="rxcui">{{ row[column] }}</td>
+                        {% elif column == 'DRUG_NAME' %}
+                            <td class="drug-name" data-rxcui="{{ row['RXCUI'] }}">
+                                <span class="loading-text">Loading...</span>
+                            </td>
+                        {% elif column in ['QUANTITY_LIMIT_YN', 'PRIOR_AUTH_YN', 'STEP_THERAPY_YN', 'CAPPED_BENEFIT_YN'] %}
+                            <td {% if row[column] == 'Yes' %}class="yes"{% endif %}>
+                                {{ row[column] }}
+                            </td>
+                        {% else %}
+                            <td>{{ row[column] }}</td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Sorting functionality
+        let currentSortColumn = '';
+        let isAscending = true;
+
+        function sortTable(column) {
+            const table = document.getElementById('dataTable');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Remove existing sort indicators
+            table.querySelectorAll('th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            
+            // Update sort direction
+            if (currentSortColumn === column) {
+                isAscending = !isAscending;
+            } else {
+                isAscending = true;
+                currentSortColumn = column;
+            }
+            
+            // Add sort indicator
+            const th = table.querySelector(`th[data-column="${column}"]`);
+            th.classList.add(isAscending ? 'sort-asc' : 'sort-desc');
+            
+            // Sort rows
+            rows.sort((a, b) => {
+                const aValue = a.children[Array.from(th.parentNode.children).indexOf(th)].textContent;
+                const bValue = b.children[Array.from(th.parentNode.children).indexOf(th)].textContent;
+                
+                if (!isNaN(aValue) && !isNaN(bValue)) {
+                    return isAscending ? aValue - bValue : bValue - aValue;
+                }
+                return isAscending ? 
+                    aValue.localeCompare(bValue) : 
+                    bValue.localeCompare(aValue);
+            });
+            
+            // Reorder rows
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // Add click handlers to headers
+        document.querySelectorAll('th').forEach(th => {
+            th.addEventListener('click', () => {
+                sortTable(th.dataset.column);
+            });
+        });
+
+        // Drug name fetching with retry mechanism
+        async function fetchDrugName(rxcui, element, retryCount = 0) {
+            try {
+                const response = await fetch(`/get_drug_name/${rxcui}`);
+                if (!response.ok) {
+                    if (response.status === 429 && retryCount < 3) {  // Rate limit hit
+                        await new Promise(resolve => setTimeout(resolve, 1000 * (retryCount + 1)));
+                        return fetchDrugName(rxcui, element, retryCount + 1);
+                    }
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                if (data.drug_name && data.drug_name !== 'Name not found' && data.drug_name !== 'Error fetching name') {
+                    element.textContent = data.drug_name;
+                } else {
+                    element.innerHTML = `<span class="error-text">Name not found</span>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                element.innerHTML = `
+                    <span class="error-text">Error loading name</span>
+                    <button class="retry-button" onclick="fetchDrugName('${rxcui}', this.parentElement)">Retry</button>
+                `;
+            }
+        }
+
+        // Initialize drug name fetching
+        document.addEventListener('DOMContentLoaded', function() {
+            const drugNameCells = document.querySelectorAll('.drug-name');
+            drugNameCells.forEach(cell => {
+                const rxcui = cell.getAttribute('data-rxcui');
+                if (rxcui) {
+                    fetchDrugName(rxcui, cell);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

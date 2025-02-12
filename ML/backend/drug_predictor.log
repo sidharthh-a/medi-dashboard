@@ -1,0 +1,488 @@
+2025-02-10 21:44:31,773 - INFO - Loading data from: drug_data.json
+2025-02-10 21:44:31,790 - INFO - Successfully loaded 1000 records
+2025-02-10 21:44:31,809 - INFO - Data preprocessing completed successfully
+2025-02-10 21:44:32,532 - INFO - Successfully trained models for 1000 drugs
+2025-02-10 21:44:32,571 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-10 21:44:32,572 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 21:44:32,574 - INFO -  * Restarting with stat
+2025-02-10 21:44:34,909 - INFO - Loading data from: drug_data.json
+2025-02-10 21:44:35,004 - INFO - Successfully loaded 1000 records
+2025-02-10 21:44:35,018 - INFO - Data preprocessing completed successfully
+2025-02-10 21:44:35,692 - INFO - Successfully trained models for 1000 drugs
+2025-02-10 21:44:35,699 - WARNING -  * Debugger is active!
+2025-02-10 21:44:35,701 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 21:44:38,798 - INFO - 127.0.0.1 - - [10/Feb/2025 21:44:38] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-10 21:44:38,935 - INFO - 127.0.0.1 - - [10/Feb/2025 21:44:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-10 21:55:40,049 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-10 21:55:40,050 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 21:55:40,052 - INFO -  * Restarting with stat
+2025-02-10 21:55:41,868 - WARNING -  * Debugger is active!
+2025-02-10 21:55:41,873 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 21:55:54,187 - INFO - 127.0.0.1 - - [10/Feb/2025 21:55:54] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-10 21:57:58,289 - INFO -  * Detected change in 'C:\\Users\\Kathir chelvan I\\Downloads\\Codefest25-main\\Codefest25-main\\backend\\drug_spending_prediction.py', reloading
+2025-02-10 21:57:58,581 - INFO -  * Restarting with stat
+2025-02-10 21:58:00,017 - INFO - Loading data from: drug_data.json
+2025-02-10 21:58:00,030 - INFO - Successfully loaded 1000 records
+2025-02-10 21:58:00,041 - INFO - Data preprocessing completed successfully
+2025-02-10 21:58:00,780 - INFO - Successfully trained models for 1000 drugs
+2025-02-10 22:00:33,361 - INFO - Loading data from: drug_data.json
+2025-02-10 22:00:33,388 - INFO - Successfully loaded 1000 records
+2025-02-10 22:00:33,399 - INFO - Data preprocessing completed successfully
+2025-02-10 22:00:34,011 - INFO - Successfully trained models for 1000 drugs
+2025-02-10 22:00:47,151 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-10 22:00:47,151 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 22:00:47,153 - INFO -  * Restarting with stat
+2025-02-10 22:00:49,568 - WARNING -  * Debugger is active!
+2025-02-10 22:00:49,570 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 22:01:01,176 - INFO - 127.0.0.1 - - [10/Feb/2025 22:01:01] "[33mGET /load_dat HTTP/1.1[0m" 404 -
+2025-02-10 22:01:01,218 - INFO - 127.0.0.1 - - [10/Feb/2025 22:01:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-10 22:01:17,816 - INFO - Loading data from: drug_data.json
+2025-02-10 22:01:17,861 - INFO - Successfully loaded 1000 records
+2025-02-10 22:01:17,894 - INFO - Data preprocessing completed successfully
+2025-02-10 22:01:17,895 - INFO - 127.0.0.1 - - [10/Feb/2025 22:01:17] "GET /load_data HTTP/1.1" 200 -
+2025-02-10 22:01:31,523 - INFO - Successfully trained models for 1000 drugs
+2025-02-10 22:01:31,524 - INFO - 127.0.0.1 - - [10/Feb/2025 22:01:31] "GET /train_models HTTP/1.1" 200 -
+2025-02-10 22:02:03,474 - INFO - 127.0.0.1 - - [10/Feb/2025 22:02:03] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:08:16,536 - INFO - 127.0.0.1 - - [10/Feb/2025 22:08:16] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:02,863 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:02] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:03,290 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:03] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:03,720 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:03] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:04,113 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:04] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:04,563 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:04] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:04,945 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:04] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:05,356 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:05] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:05,798 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:05] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:06,327 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:06] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:06,767 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:06] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:07,145 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:07] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:07,591 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:07] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:07,965 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:07] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:08,407 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:08] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:08,846 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:08] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:09,292 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:09] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:09,736 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:09] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:10,144 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:10] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:10,597 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:10] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:10,887 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:10] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:11,505 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:11] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:12,268 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:12] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:12,581 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:12] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:09:13,339 - INFO - 127.0.0.1 - - [10/Feb/2025 22:09:13] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:11:25,211 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-10 22:11:25,213 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 22:11:25,214 - INFO -  * Restarting with stat
+2025-02-10 22:11:26,193 - WARNING -  * Debugger is active!
+2025-02-10 22:11:26,194 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 22:11:37,432 - ERROR - No trained models available
+2025-02-10 22:11:37,440 - INFO - 127.0.0.1 - - [10/Feb/2025 22:11:37] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:12:02,413 - INFO - 127.0.0.1 - - [10/Feb/2025 22:12:02] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-10 22:12:10,620 - INFO - 127.0.0.1 - - [10/Feb/2025 22:12:10] "[33mGET /predictions HTTP/1.1[0m" 404 -
+2025-02-10 22:12:28,458 - ERROR - No trained models available
+2025-02-10 22:12:28,460 - INFO - 127.0.0.1 - - [10/Feb/2025 22:12:28] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:12:30,572 - ERROR - No trained models available
+2025-02-10 22:12:30,574 - INFO - 127.0.0.1 - - [10/Feb/2025 22:12:30] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:12:48,009 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-10 22:12:48,009 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 22:12:48,010 - INFO -  * Restarting with stat
+2025-02-10 22:12:49,027 - WARNING -  * Debugger is active!
+2025-02-10 22:12:49,029 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 22:12:53,250 - ERROR - No trained models available
+2025-02-10 22:12:53,252 - INFO - 127.0.0.1 - - [10/Feb/2025 22:12:53] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:13:16,249 - INFO -  * Detected change in 'C:\\Users\\Kathir chelvan I\\Downloads\\Codefest25-main\\Codefest25-main\\backend\\drug_spending_prediction.py', reloading
+2025-02-10 22:13:16,506 - INFO -  * Restarting with stat
+2025-02-10 22:13:17,488 - WARNING -  * Debugger is active!
+2025-02-10 22:13:17,490 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 22:13:19,511 - INFO -  * Detected change in 'C:\\Users\\Kathir chelvan I\\Downloads\\Codefest25-main\\Codefest25-main\\backend\\drug_spending_prediction.py', reloading
+2025-02-10 22:13:19,744 - INFO -  * Restarting with stat
+2025-02-10 22:13:20,739 - WARNING -  * Debugger is active!
+2025-02-10 22:13:20,741 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 22:13:22,947 - ERROR - No trained models available
+2025-02-10 22:13:22,949 - INFO - 127.0.0.1 - - [10/Feb/2025 22:13:22] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:13:24,851 - ERROR - No trained models available
+2025-02-10 22:13:24,853 - INFO - 127.0.0.1 - - [10/Feb/2025 22:13:24] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:13:42,655 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-10 22:13:42,656 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 22:13:42,657 - INFO -  * Restarting with stat
+2025-02-10 22:13:43,686 - WARNING -  * Debugger is active!
+2025-02-10 22:13:43,688 - INFO -  * Debugger PIN: 835-260-782
+2025-02-10 22:14:09,728 - ERROR - No trained models available
+2025-02-10 22:14:09,731 - INFO - 127.0.0.1 - - [10/Feb/2025 22:14:09] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-10 22:15:00,018 - INFO - Loading data from: drug_data.json
+2025-02-10 22:15:00,067 - INFO - Successfully loaded 1000 records
+2025-02-10 22:15:00,095 - INFO - Data preprocessing completed successfully
+2025-02-10 22:15:00,097 - INFO - 127.0.0.1 - - [10/Feb/2025 22:15:00] "GET /load_data HTTP/1.1" 200 -
+2025-02-10 22:15:23,604 - INFO - Successfully trained models for 1000 drugs
+2025-02-10 22:15:23,605 - INFO - 127.0.0.1 - - [10/Feb/2025 22:15:23] "GET /train_models HTTP/1.1" 200 -
+2025-02-10 22:15:46,923 - INFO - 127.0.0.1 - - [10/Feb/2025 22:15:46] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:16:32,430 - INFO - 127.0.0.1 - - [10/Feb/2025 22:16:32] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:04,195 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:04] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:04,516 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:04] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:04,927 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:04] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:05,471 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:05] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:05,812 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:05] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:06,148 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:06] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:06,557 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:06] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:06,972 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:06] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:07,494 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:07] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:07,789 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:07] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:08,204 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:08] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:08,605 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:08] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:09,008 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:09] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:09,522 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:09] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:21:10,163 - INFO - 127.0.0.1 - - [10/Feb/2025 22:21:10] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:44:39,800 - INFO - 127.0.0.1 - - [10/Feb/2025 22:44:39] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:47:41,109 - INFO - 127.0.0.1 - - [10/Feb/2025 22:47:41] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:49:27,042 - INFO - 127.0.0.1 - - [10/Feb/2025 22:49:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:49:33,577 - INFO - 127.0.0.1 - - [10/Feb/2025 22:49:33] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:50:27,195 - INFO - 127.0.0.1 - - [10/Feb/2025 22:50:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:52:27,049 - INFO - 127.0.0.1 - - [10/Feb/2025 22:52:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:52:31,984 - INFO - 127.0.0.1 - - [10/Feb/2025 22:52:31] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:55:26,855 - INFO - 127.0.0.1 - - [10/Feb/2025 22:55:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:56:56,470 - INFO - 127.0.0.1 - - [10/Feb/2025 22:56:56] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:57:54,056 - INFO - 127.0.0.1 - - [10/Feb/2025 22:57:54] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:58:27,249 - INFO - 127.0.0.1 - - [10/Feb/2025 22:58:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:58:27,528 - INFO - 127.0.0.1 - - [10/Feb/2025 22:58:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:58:27,944 - INFO - 127.0.0.1 - - [10/Feb/2025 22:58:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 22:58:28,591 - INFO - 127.0.0.1 - - [10/Feb/2025 22:58:28] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:01:12,743 - INFO - 127.0.0.1 - - [10/Feb/2025 23:01:12] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:01:25,221 - INFO - 127.0.0.1 - - [10/Feb/2025 23:01:25] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:01:26,811 - INFO - 127.0.0.1 - - [10/Feb/2025 23:01:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:01:27,689 - INFO - 127.0.0.1 - - [10/Feb/2025 23:01:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:02:17,328 - INFO - 127.0.0.1 - - [10/Feb/2025 23:02:17] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:04:26,994 - INFO - 127.0.0.1 - - [10/Feb/2025 23:04:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:07:27,170 - INFO - 127.0.0.1 - - [10/Feb/2025 23:07:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:07:27,516 - INFO - 127.0.0.1 - - [10/Feb/2025 23:07:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:07:28,142 - INFO - 127.0.0.1 - - [10/Feb/2025 23:07:28] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:08:41,023 - INFO - 127.0.0.1 - - [10/Feb/2025 23:08:41] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:09:07,511 - INFO - 127.0.0.1 - - [10/Feb/2025 23:09:07] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:09:15,308 - INFO - 127.0.0.1 - - [10/Feb/2025 23:09:15] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:10:27,166 - INFO - 127.0.0.1 - - [10/Feb/2025 23:10:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:13:27,450 - INFO - 127.0.0.1 - - [10/Feb/2025 23:13:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:22:57,995 - INFO - 127.0.0.1 - - [10/Feb/2025 23:22:57] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:25:26,925 - INFO - 127.0.0.1 - - [10/Feb/2025 23:25:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:26,665 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:26,956 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:27,356 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:27,758 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:28,223 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:28] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:28,628 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:28] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:29,149 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:29] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:29,428 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:29] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:28:32,712 - INFO - 127.0.0.1 - - [10/Feb/2025 23:28:32] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:09,380 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:09] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:14,029 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:14] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:26,724 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:26] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:27,120 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:27,513 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:27,959 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:27] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:28,398 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:28] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:28,813 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:28] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:29,287 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:29] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:29,694 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:29] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:29,974 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:29] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:30,511 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:30] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:30,914 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:30] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:31,374 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:31] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:31,749 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:31] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:32,234 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:32] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:32,602 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:32] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:33,043 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:33] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:33,460 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:33] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:33,888 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:33] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:34,289 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:34] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:34,701 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:34] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:35,134 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:35] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:35,565 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:35] "GET /predict HTTP/1.1" 200 -
+2025-02-10 23:31:35,963 - INFO - 127.0.0.1 - - [10/Feb/2025 23:31:35] "GET /predict HTTP/1.1" 200 -
+2025-02-11 01:52:32,199 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 01:52:32,235 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 01:52:32,246 - INFO -  * Restarting with stat
+2025-02-11 01:52:35,084 - WARNING -  * Debugger is active!
+2025-02-11 01:52:35,105 - INFO -  * Debugger PIN: 394-628-446
+2025-02-11 01:52:50,372 - INFO - 127.0.0.1 - - [11/Feb/2025 01:52:50] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 01:52:50,944 - INFO - 127.0.0.1 - - [11/Feb/2025 01:52:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-11 01:53:47,670 - INFO - Loading data from: drug_data.json
+2025-02-11 01:53:47,752 - INFO - Successfully loaded 1000 records
+2025-02-11 01:53:47,798 - INFO - Data preprocessing completed successfully
+2025-02-11 01:53:47,799 - INFO - 127.0.0.1 - - [11/Feb/2025 01:53:47] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 01:54:17,661 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 01:54:17,662 - INFO - 127.0.0.1 - - [11/Feb/2025 01:54:17] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 01:54:27,470 - INFO - 127.0.0.1 - - [11/Feb/2025 01:54:27] "GET /predict HTTP/1.1" 200 -
+2025-02-11 01:55:23,028 - INFO - 127.0.0.1 - - [11/Feb/2025 01:55:23] "GET /predict HTTP/1.1" 200 -
+2025-02-11 01:56:19,285 - INFO - 127.0.0.1 - - [11/Feb/2025 01:56:19] "GET /predict HTTP/1.1" 200 -
+2025-02-11 01:58:48,663 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 01:58:48,664 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 01:58:48,671 - INFO -  * Restarting with stat
+2025-02-11 01:58:51,469 - WARNING -  * Debugger is active!
+2025-02-11 01:58:51,491 - INFO -  * Debugger PIN: 394-628-446
+2025-02-11 01:58:53,371 - INFO - 127.0.0.1 - - [11/Feb/2025 01:58:53] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 01:59:24,376 - ERROR - No trained models available
+2025-02-11 01:59:24,378 - INFO - 127.0.0.1 - - [11/Feb/2025 01:59:24] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-11 01:59:27,685 - ERROR - No trained models available
+2025-02-11 01:59:27,687 - INFO - 127.0.0.1 - - [11/Feb/2025 01:59:27] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-11 01:59:37,961 - ERROR - No trained models available
+2025-02-11 01:59:37,962 - INFO - 127.0.0.1 - - [11/Feb/2025 01:59:37] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2025-02-11 02:00:01,928 - INFO - Loading data from: drug_data.json
+2025-02-11 02:00:02,008 - INFO - Successfully loaded 1000 records
+2025-02-11 02:00:02,029 - INFO - Data preprocessing completed successfully
+2025-02-11 02:00:02,031 - INFO - 127.0.0.1 - - [11/Feb/2025 02:00:02] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 02:00:17,902 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 02:00:17,903 - INFO - 127.0.0.1 - - [11/Feb/2025 02:00:17] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 02:00:26,611 - INFO - 127.0.0.1 - - [11/Feb/2025 02:00:26] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:00:31,068 - INFO - 127.0.0.1 - - [11/Feb/2025 02:00:31] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:00:42,727 - INFO - 127.0.0.1 - - [11/Feb/2025 02:00:42] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:00:50,647 - INFO - 127.0.0.1 - - [11/Feb/2025 02:00:50] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:02:05,387 - INFO - 127.0.0.1 - - [11/Feb/2025 02:02:05] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:04:38,473 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 02:04:38,474 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 02:04:38,477 - INFO -  * Restarting with stat
+2025-02-11 02:04:41,375 - WARNING -  * Debugger is active!
+2025-02-11 02:04:41,395 - INFO -  * Debugger PIN: 394-628-446
+2025-02-11 02:04:42,523 - INFO - 127.0.0.1 - - [11/Feb/2025 02:04:42] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 02:04:49,784 - INFO - Loading data from: drug_data.json
+2025-02-11 02:04:49,865 - INFO - Successfully loaded 1000 records
+2025-02-11 02:04:49,885 - INFO - Data preprocessing completed successfully
+2025-02-11 02:04:49,886 - INFO - 127.0.0.1 - - [11/Feb/2025 02:04:49] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 02:05:00,710 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 02:05:00,713 - INFO - 127.0.0.1 - - [11/Feb/2025 02:05:00] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 02:05:05,200 - INFO - 127.0.0.1 - - [11/Feb/2025 02:05:05] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:05:22,181 - INFO - 127.0.0.1 - - [11/Feb/2025 02:05:22] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:06:13,623 - INFO - 127.0.0.1 - - [11/Feb/2025 02:06:13] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:06:18,114 - INFO - 127.0.0.1 - - [11/Feb/2025 02:06:18] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:06:19,643 - INFO - 127.0.0.1 - - [11/Feb/2025 02:06:19] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:17:57,372 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 02:17:57,373 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 02:17:57,377 - INFO -  * Restarting with stat
+2025-02-11 02:18:00,003 - WARNING -  * Debugger is active!
+2025-02-11 02:18:00,064 - INFO -  * Debugger PIN: 394-628-446
+2025-02-11 02:18:02,276 - INFO - 127.0.0.1 - - [11/Feb/2025 02:18:02] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 02:18:02,634 - INFO - 127.0.0.1 - - [11/Feb/2025 02:18:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-11 02:18:21,519 - INFO - Loading data from: drug_data.json
+2025-02-11 02:18:21,610 - INFO - Successfully loaded 1000 records
+2025-02-11 02:18:21,637 - INFO - Data preprocessing completed successfully
+2025-02-11 02:18:21,638 - INFO - 127.0.0.1 - - [11/Feb/2025 02:18:21] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 02:18:40,761 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 02:18:40,763 - INFO - 127.0.0.1 - - [11/Feb/2025 02:18:40] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 02:18:49,405 - INFO - 127.0.0.1 - - [11/Feb/2025 02:18:49] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:18:59,424 - INFO - 127.0.0.1 - - [11/Feb/2025 02:18:59] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:21:22,959 - INFO - 127.0.0.1 - - [11/Feb/2025 02:21:22] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:23:20,142 - INFO - 127.0.0.1 - - [11/Feb/2025 02:23:20] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:34:11,044 - INFO - 127.0.0.1 - - [11/Feb/2025 02:34:11] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:34:21,608 - INFO - 127.0.0.1 - - [11/Feb/2025 02:34:21] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:46:31,504 - INFO - 127.0.0.1 - - [11/Feb/2025 02:46:31] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:48:07,178 - INFO - 127.0.0.1 - - [11/Feb/2025 02:48:07] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:48:27,451 - INFO - 127.0.0.1 - - [11/Feb/2025 02:48:27] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:48:43,480 - INFO - 127.0.0.1 - - [11/Feb/2025 02:48:43] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:48:55,674 - INFO - 127.0.0.1 - - [11/Feb/2025 02:48:55] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:51:29,201 - INFO - 127.0.0.1 - - [11/Feb/2025 02:51:29] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:51:36,139 - INFO - 127.0.0.1 - - [11/Feb/2025 02:51:36] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:51:44,316 - INFO - 127.0.0.1 - - [11/Feb/2025 02:51:44] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:52:06,624 - INFO - 127.0.0.1 - - [11/Feb/2025 02:52:06] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:54:54,825 - INFO - 127.0.0.1 - - [11/Feb/2025 02:54:54] "GET /predict HTTP/1.1" 200 -
+2025-02-11 02:57:59,495 - INFO - 127.0.0.1 - - [11/Feb/2025 02:57:59] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:00:22,975 - INFO - 127.0.0.1 - - [11/Feb/2025 03:00:22] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:03:00,245 - INFO - 127.0.0.1 - - [11/Feb/2025 03:03:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:03:02,335 - INFO - 127.0.0.1 - - [11/Feb/2025 03:03:02] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:03:03,914 - INFO - 127.0.0.1 - - [11/Feb/2025 03:03:03] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:03:08,739 - INFO - 127.0.0.1 - - [11/Feb/2025 03:03:08] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:03:08,819 - INFO - 127.0.0.1 - - [11/Feb/2025 03:03:08] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:03:09,977 - INFO - 127.0.0.1 - - [11/Feb/2025 03:03:09] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:05:12,257 - INFO - 127.0.0.1 - - [11/Feb/2025 03:05:12] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:06:23,217 - INFO - 127.0.0.1 - - [11/Feb/2025 03:06:23] "GET /predict HTTP/1.1" 200 -
+2025-02-11 03:07:13,738 - INFO - 127.0.0.1 - - [11/Feb/2025 03:07:13] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:00:00,162 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 04:00:00,182 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 04:00:00,186 - INFO -  * Restarting with stat
+2025-02-11 04:00:03,084 - WARNING -  * Debugger is active!
+2025-02-11 04:00:03,098 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 04:00:05,566 - INFO - 127.0.0.1 - - [11/Feb/2025 04:00:05] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 04:00:05,888 - INFO - 127.0.0.1 - - [11/Feb/2025 04:00:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-11 04:00:10,826 - INFO - Loading data from: drug_data.json
+2025-02-11 04:00:10,892 - INFO - Successfully loaded 1000 records
+2025-02-11 04:00:10,937 - INFO - Data preprocessing completed successfully
+2025-02-11 04:00:10,938 - INFO - 127.0.0.1 - - [11/Feb/2025 04:00:10] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 04:00:17,983 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 04:00:17,984 - INFO - 127.0.0.1 - - [11/Feb/2025 04:00:17] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 04:00:22,757 - INFO - 127.0.0.1 - - [11/Feb/2025 04:00:22] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:00:54,069 - INFO - 127.0.0.1 - - [11/Feb/2025 04:00:54] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:02:44,046 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 04:02:44,047 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 04:02:44,053 - INFO -  * Restarting with stat
+2025-02-11 04:02:48,978 - WARNING -  * Debugger is active!
+2025-02-11 04:02:49,005 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 04:03:09,489 - INFO - 127.0.0.1 - - [11/Feb/2025 04:03:09] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 04:03:10,031 - INFO - 127.0.0.1 - - [11/Feb/2025 04:03:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-11 04:03:14,900 - INFO - Loading data from: drug_data.json
+2025-02-11 04:03:15,016 - INFO - Successfully loaded 1000 records
+2025-02-11 04:03:15,108 - INFO - Data preprocessing completed successfully
+2025-02-11 04:03:15,110 - INFO - 127.0.0.1 - - [11/Feb/2025 04:03:15] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 04:03:22,866 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 04:03:22,870 - INFO - 127.0.0.1 - - [11/Feb/2025 04:03:22] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 04:03:27,483 - INFO - 127.0.0.1 - - [11/Feb/2025 04:03:27] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:03:49,727 - INFO - 127.0.0.1 - - [11/Feb/2025 04:03:49] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:04:29,749 - INFO - 127.0.0.1 - - [11/Feb/2025 04:04:29] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:04:30,588 - INFO - 127.0.0.1 - - [11/Feb/2025 04:04:30] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:05:50,879 - INFO - 127.0.0.1 - - [11/Feb/2025 04:05:50] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:06:22,360 - INFO - 127.0.0.1 - - [11/Feb/2025 04:06:22] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:08:05,331 - INFO - 127.0.0.1 - - [11/Feb/2025 04:08:05] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:12:24,007 - INFO - 127.0.0.1 - - [11/Feb/2025 04:12:24] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:12:52,657 - INFO - 127.0.0.1 - - [11/Feb/2025 04:12:52] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:18:53,948 - INFO - 127.0.0.1 - - [11/Feb/2025 04:18:53] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:29:04,528 - INFO - 127.0.0.1 - - [11/Feb/2025 04:29:04] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:31:00,690 - INFO - 127.0.0.1 - - [11/Feb/2025 04:31:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:39:18,312 - INFO - 127.0.0.1 - - [11/Feb/2025 04:39:18] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:39:26,388 - INFO - 127.0.0.1 - - [11/Feb/2025 04:39:26] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:39:30,282 - INFO - 127.0.0.1 - - [11/Feb/2025 04:39:30] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:07,523 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:07] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:10,735 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:10] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:19,583 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:19] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:31,292 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:31] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:32,335 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:32] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:34,025 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:34] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:37,106 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:37] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:41:46,655 - INFO - 127.0.0.1 - - [11/Feb/2025 04:41:46] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:42:59,744 - INFO - 127.0.0.1 - - [11/Feb/2025 04:42:59] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:43:12,168 - INFO - 127.0.0.1 - - [11/Feb/2025 04:43:12] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:44:45,334 - INFO - 127.0.0.1 - - [11/Feb/2025 04:44:45] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:44:46,252 - INFO - 127.0.0.1 - - [11/Feb/2025 04:44:46] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:45:06,030 - INFO - 127.0.0.1 - - [11/Feb/2025 04:45:06] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:45:21,354 - INFO - 127.0.0.1 - - [11/Feb/2025 04:45:21] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:46:33,666 - INFO - 127.0.0.1 - - [11/Feb/2025 04:46:33] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:48:47,830 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 04:48:47,830 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 04:48:47,830 - INFO -  * Restarting with stat
+2025-02-11 04:48:50,439 - WARNING -  * Debugger is active!
+2025-02-11 04:48:50,453 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 04:48:51,733 - INFO - 127.0.0.1 - - [11/Feb/2025 04:48:51] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 04:48:52,162 - INFO - 127.0.0.1 - - [11/Feb/2025 04:48:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-11 04:48:56,019 - INFO - Loading data from: drug_data.json
+2025-02-11 04:48:56,090 - INFO - Successfully loaded 1000 records
+2025-02-11 04:48:56,130 - INFO - Data preprocessing completed successfully
+2025-02-11 04:48:56,130 - INFO - 127.0.0.1 - - [11/Feb/2025 04:48:56] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 04:49:02,755 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 04:49:02,755 - INFO - 127.0.0.1 - - [11/Feb/2025 04:49:02] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 04:49:07,406 - INFO - 127.0.0.1 - - [11/Feb/2025 04:49:07] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:49:32,587 - INFO - 127.0.0.1 - - [11/Feb/2025 04:49:32] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:49:44,968 - INFO - 127.0.0.1 - - [11/Feb/2025 04:49:44] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:50:00,251 - INFO - 127.0.0.1 - - [11/Feb/2025 04:50:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:50:23,239 - INFO - 127.0.0.1 - - [11/Feb/2025 04:50:23] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:55:32,009 - INFO - 127.0.0.1 - - [11/Feb/2025 04:55:32] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:57:20,993 - INFO - 127.0.0.1 - - [11/Feb/2025 04:57:20] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:57:22,334 - INFO - 127.0.0.1 - - [11/Feb/2025 04:57:22] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:57:32,881 - INFO - 127.0.0.1 - - [11/Feb/2025 04:57:32] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:57:49,097 - INFO - 127.0.0.1 - - [11/Feb/2025 04:57:49] "GET /predict HTTP/1.1" 200 -
+2025-02-11 04:58:50,477 - INFO - 127.0.0.1 - - [11/Feb/2025 04:58:50] "GET /predict HTTP/1.1" 200 -
+2025-02-11 05:03:02,317 - INFO - 127.0.0.1 - - [11/Feb/2025 05:03:02] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:28:23,107 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 08:28:23,108 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 08:28:23,117 - INFO -  * Restarting with stat
+2025-02-11 08:28:28,668 - WARNING -  * Debugger is active!
+2025-02-11 08:28:28,751 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 08:28:30,631 - INFO - 127.0.0.1 - - [11/Feb/2025 08:28:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 08:28:36,450 - INFO - Loading data from: drug_data.json
+2025-02-11 08:28:36,555 - INFO - Successfully loaded 1000 records
+2025-02-11 08:28:36,621 - INFO - Data preprocessing completed successfully
+2025-02-11 08:28:36,622 - INFO - 127.0.0.1 - - [11/Feb/2025 08:28:36] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 08:28:43,791 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 08:28:43,795 - INFO - 127.0.0.1 - - [11/Feb/2025 08:28:43] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 08:28:51,402 - INFO - 127.0.0.1 - - [11/Feb/2025 08:28:51] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:29:09,844 - INFO - 127.0.0.1 - - [11/Feb/2025 08:29:09] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:29:23,003 - INFO - 127.0.0.1 - - [11/Feb/2025 08:29:23] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:29:47,986 - INFO - 127.0.0.1 - - [11/Feb/2025 08:29:47] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 08:29:51,155 - INFO - 127.0.0.1 - - [11/Feb/2025 08:29:51] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:29:55,541 - INFO - 127.0.0.1 - - [11/Feb/2025 08:29:55] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:30:40,861 - INFO - 127.0.0.1 - - [11/Feb/2025 08:30:40] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:32:06,794 - INFO - 127.0.0.1 - - [11/Feb/2025 08:32:06] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:34:44,045 - INFO - 127.0.0.1 - - [11/Feb/2025 08:34:44] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:35:08,697 - INFO - 127.0.0.1 - - [11/Feb/2025 08:35:08] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:36:06,441 - INFO - 127.0.0.1 - - [11/Feb/2025 08:36:06] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:36:30,439 - INFO - 127.0.0.1 - - [11/Feb/2025 08:36:30] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:37:13,964 - INFO - 127.0.0.1 - - [11/Feb/2025 08:37:13] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:44:26,864 - INFO - 127.0.0.1 - - [11/Feb/2025 08:44:26] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:48:11,672 - INFO - 127.0.0.1 - - [11/Feb/2025 08:48:11] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:52:18,696 - INFO - 127.0.0.1 - - [11/Feb/2025 08:52:18] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:56:58,009 - INFO - 127.0.0.1 - - [11/Feb/2025 08:56:58] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:58:35,737 - INFO - 127.0.0.1 - - [11/Feb/2025 08:58:35] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:58:54,355 - INFO - 127.0.0.1 - - [11/Feb/2025 08:58:54] "GET /predict HTTP/1.1" 200 -
+2025-02-11 08:59:00,319 - INFO - 127.0.0.1 - - [11/Feb/2025 08:59:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:01:45,169 - INFO - 127.0.0.1 - - [11/Feb/2025 09:01:45] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:04:57,572 - INFO - 127.0.0.1 - - [11/Feb/2025 09:04:57] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:11:20,101 - INFO - 127.0.0.1 - - [11/Feb/2025 09:11:20] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:15:00,312 - INFO - 127.0.0.1 - - [11/Feb/2025 09:15:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:15:26,275 - INFO - 127.0.0.1 - - [11/Feb/2025 09:15:26] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:16:52,979 - INFO - 127.0.0.1 - - [11/Feb/2025 09:16:52] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:18:28,922 - INFO - 127.0.0.1 - - [11/Feb/2025 09:18:28] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:18:42,151 - INFO - 127.0.0.1 - - [11/Feb/2025 09:18:42] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:21:58,477 - INFO - 127.0.0.1 - - [11/Feb/2025 09:21:58] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:22:13,397 - INFO - 127.0.0.1 - - [11/Feb/2025 09:22:13] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:23:28,302 - INFO - 127.0.0.1 - - [11/Feb/2025 09:23:28] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:28:46,736 - INFO - 127.0.0.1 - - [11/Feb/2025 09:28:46] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:29:34,110 - INFO - 127.0.0.1 - - [11/Feb/2025 09:29:34] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:35:07,620 - INFO - 127.0.0.1 - - [11/Feb/2025 09:35:07] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:35:11,756 - INFO - 127.0.0.1 - - [11/Feb/2025 09:35:11] "GET /predict HTTP/1.1" 200 -
+2025-02-11 09:38:13,365 - INFO - 127.0.0.1 - - [11/Feb/2025 09:38:13] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:06:14,540 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 10:06:14,589 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 10:06:14,592 - INFO -  * Restarting with stat
+2025-02-11 10:06:17,225 - WARNING -  * Debugger is active!
+2025-02-11 10:06:17,244 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 10:07:01,089 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 10:07:01,090 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 10:07:01,094 - INFO -  * Restarting with stat
+2025-02-11 10:07:03,870 - WARNING -  * Debugger is active!
+2025-02-11 10:07:03,892 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 10:07:04,906 - INFO - 127.0.0.1 - - [11/Feb/2025 10:07:04] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 10:07:10,016 - INFO - Loading data from: drug_data.json
+2025-02-11 10:07:10,142 - INFO - Successfully loaded 1000 records
+2025-02-11 10:07:10,168 - INFO - Data preprocessing completed successfully
+2025-02-11 10:07:10,168 - INFO - 127.0.0.1 - - [11/Feb/2025 10:07:10] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 10:07:15,833 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 10:07:15,833 - INFO - 127.0.0.1 - - [11/Feb/2025 10:07:15] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 10:07:21,649 - INFO - 127.0.0.1 - - [11/Feb/2025 10:07:21] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:08:52,273 - INFO - 127.0.0.1 - - [11/Feb/2025 10:08:52] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:10:39,967 - INFO - 127.0.0.1 - - [11/Feb/2025 10:10:39] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 10:11:27,601 - INFO - 127.0.0.1 - - [11/Feb/2025 10:11:27] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 10:16:00,706 - INFO - 127.0.0.1 - - [11/Feb/2025 10:16:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:16:54,699 - INFO - 127.0.0.1 - - [11/Feb/2025 10:16:54] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:20:06,407 - INFO - 127.0.0.1 - - [11/Feb/2025 10:20:06] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:21:18,859 - INFO - 127.0.0.1 - - [11/Feb/2025 10:21:18] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:21:50,283 - INFO - 127.0.0.1 - - [11/Feb/2025 10:21:50] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:25:15,863 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-11 10:25:15,864 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-11 10:25:15,866 - INFO -  * Restarting with stat
+2025-02-11 10:25:18,573 - WARNING -  * Debugger is active!
+2025-02-11 10:25:18,592 - INFO -  * Debugger PIN: 917-766-920
+2025-02-11 10:25:24,485 - INFO - 127.0.0.1 - - [11/Feb/2025 10:25:24] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-11 10:25:31,180 - INFO - Loading data from: drug_data.json
+2025-02-11 10:25:31,242 - INFO - Successfully loaded 1000 records
+2025-02-11 10:25:31,276 - INFO - Data preprocessing completed successfully
+2025-02-11 10:25:31,276 - INFO - 127.0.0.1 - - [11/Feb/2025 10:25:31] "GET /load_data HTTP/1.1" 200 -
+2025-02-11 10:25:37,762 - INFO - Successfully trained models for 1000 drugs
+2025-02-11 10:25:37,763 - INFO - 127.0.0.1 - - [11/Feb/2025 10:25:37] "GET /train_models HTTP/1.1" 200 -
+2025-02-11 10:25:54,572 - INFO - 127.0.0.1 - - [11/Feb/2025 10:25:54] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:28:26,690 - INFO - 127.0.0.1 - - [11/Feb/2025 10:28:26] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:31:50,755 - INFO - 127.0.0.1 - - [11/Feb/2025 10:31:50] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:32:11,244 - INFO - 127.0.0.1 - - [11/Feb/2025 10:32:11] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:34:06,681 - INFO - 127.0.0.1 - - [11/Feb/2025 10:34:06] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:37:03,862 - INFO - 127.0.0.1 - - [11/Feb/2025 10:37:03] "GET /predict HTTP/1.1" 200 -
+2025-02-11 10:52:50,906 - INFO - 127.0.0.1 - - [11/Feb/2025 10:52:50] "GET /predict HTTP/1.1" 200 -
+2025-02-11 11:10:00,950 - INFO - 127.0.0.1 - - [11/Feb/2025 11:10:00] "GET /predict HTTP/1.1" 200 -
+2025-02-11 11:12:28,741 - INFO - 127.0.0.1 - - [11/Feb/2025 11:12:28] "GET /predict HTTP/1.1" 200 -
+2025-02-11 11:19:50,685 - INFO - 127.0.0.1 - - [11/Feb/2025 11:19:50] "GET /predict HTTP/1.1" 200 -

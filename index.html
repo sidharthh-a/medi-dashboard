@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 15px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover Effect with Sliding Underline */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd57; /* Change text color on hover */
+        }
+
+        nav a:hover::after {
+            width: 100%; /* Expand the underline on hover */
+        }
+
+        /* Iframe Styles */
+        iframe {
+            width: 100%;
+            height: calc(100vh - 60px); /* Adjust height to account for nav bar */
+            border: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        iframe.loaded {
+            opacity: 1; /* Fade in the iframe after loading */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="loadPage('http://localhost:3000')">Home</a>
+        <a href="#" onclick="loadPage('http://127.0.0.1:5500/ML/frontend/index.html')">ML Prediction</a>
+        <a href="#" onclick="loadPage('http://10.9.6.126:8080')">Tier Analysis</a>
+        <a href="http://127.0.0.1:5001/" target="_blank">Excluded Data</a>
+
+
+    </nav>
+
+    <iframe id="contentFrame" src="http://localhost:3000"></iframe>
+
+    <script>
+        function loadPage(url) {
+            const iframe = document.getElementById('contentFrame');
+            iframe.classList.remove('loaded'); // Hide iframe during transition
+            setTimeout(() => {
+                iframe.src = url;
+                iframe.classList.add('loaded'); // Show iframe after loading
+            }, 300); // Match the transition duration
+        }
+
+        // Initial load effect
+        window.onload = () => {
+            const iframe = document.getElementById('contentFrame');
+            iframe.classList.add('loaded');
+        };
+    </script>
+</body>
+</html>
